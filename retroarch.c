@@ -786,7 +786,7 @@ static void parse_input(int argc, char *argv[])
             FreeConsole();
 #endif
             break;
-         
+
          case RA_OPT_MENU:
             global->core_type                  = CORE_TYPE_DUMMY;
             break;
@@ -1073,7 +1073,7 @@ void rarch_main_alloc(void)
 /**
  * rarch_main_new:
  *
- * Will teardown drivers and clears all 
+ * Will teardown drivers and clears all
  * internal state of the program.
  * If @inited is true, will initialize all
  * drivers again after teardown.
@@ -1098,7 +1098,7 @@ void rarch_main_free(void)
    config_free();
 }
 
-/* 
+/*
  * rarch_verify_api_version:
  *
  * Compare libretro core API version against API version
@@ -1126,7 +1126,7 @@ void rarch_verify_api_version(void)
  * Validates CPU features for given processor architecture.
  *
  * Make sure we haven't compiled for something we cannot run.
- * Ideally, code would get swapped out depending on CPU support, 
+ * Ideally, code would get swapped out depending on CPU support,
  * but this will do for now.
  */
 static void validate_cpu_features(void)
@@ -1157,7 +1157,7 @@ static void validate_cpu_features(void)
 void rarch_init_system_av_info(void)
 {
    runloop_t *runloop = rarch_main_get_ptr();
-   struct retro_system_av_info *av_info = 
+   struct retro_system_av_info *av_info =
       video_viewport_get_system_av_info();
 
    pretro_get_system_av_info(av_info);
@@ -1167,7 +1167,7 @@ void rarch_init_system_av_info(void)
 /**
  * rarch_main_init:
  * @argc                 : Count of (commandline) arguments.
- * @argv                 : (Commandline) arguments. 
+ * @argv                 : (Commandline) arguments.
  *
  * Initializes the program.
  *
@@ -1268,9 +1268,6 @@ int rarch_main_init(int argc, char *argv[])
       }
 
       unsigned width = 0, height = 0;
-
-      (void)width;
-      (void)height;
 
       width = global->console.screen.resolutions.width;
       height = global->console.screen.resolutions.height;
@@ -1538,7 +1535,7 @@ void rarch_playlist_load_content(void *data, unsigned idx)
  *
  * Gets deferred core.
  *
- * Returns: 0 if there are multiple deferred cores and a 
+ * Returns: 0 if there are multiple deferred cores and a
  * selection needs to be made from a list, otherwise
  * returns -1 and fills in @s with path to core.
  **/
